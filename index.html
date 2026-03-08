@@ -1,0 +1,2304 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samira Travel — Mitra Resmi | Umrah & Haji</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="description" content="Promosi Umrah & Haji Samira Travel oleh mitra resmi. Konsultasi, pilihan paket, dan pendaftaran via WhatsApp." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg2:#f8fafc;
+      --card:#ffffff;
+      --stroke:#e2e8f0;
+
+      --text:#0f172a;
+      --text-muted:#475569;
+      --text-light:#64748b;
+
+      /* Brand colors - refined */
+      --brand:#16a34a;
+      --brand-light:#22c55e;
+      --brand-dark:#15803d;
+      --gold:#f59e0b;
+      --gold-light:#fbbf24;
+      --sky:#0ea5e9;
+      --sky-light:#38bdf8;
+
+      /* Shadows - more refined */
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+      --shadow: 0 4px 6px rgba(15, 23, 42, 0.07);
+      --shadow-md: 0 8px 16px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 16px 32px rgba(15, 23, 42, 0.1);
+      --shadow-xl: 0 24px 48px rgba(15, 23, 42, 0.12);
+
+      /* Border radius */
+      --radius-sm: 8px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-2xl: 24px;
+
+      /* Spacing scale */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0}
+    html{scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    html,body{height:100%}
+    
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 0% 0%, rgba(34,197,94,.06), transparent 50%),
+        radial-gradient(1200px 800px at 100% 0%, rgba(245,158,11,.06), transparent 50%),
+        radial-gradient(800px 600px at 50% 100%, rgba(14,165,233,.04), transparent 60%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 40%, var(--bg2) 100%);
+      background-attachment: fixed;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+    button{font-family:inherit; border:none; cursor:pointer}
+
+    .wrap{
+      max-width:1200px; 
+      margin:0 auto; 
+      padding:0 var(--space-6);
+    }
+
+    /* ANIMATIONS - smoother & more refined */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .75; }
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bounce-gentle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes rotate-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.3); }
+      50% { box-shadow: 0 0 30px rgba(34,197,94,0.6); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+    .animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+    /* LOADING SCREEN */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: rotate-slow 1s linear infinite;
+    }
+
+    /* NAVIGATION - more refined */
+    .nav{
+      position:sticky; 
+      top:0; 
+      z-index:100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--stroke);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav.scrolled {
+      background: rgba(255,255,255,.96);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .nav-inner{
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      gap:var(--space-4);
+      padding:var(--space-4) 0;
+      max-width:1200px; 
+      margin:0 auto;
+      padding-left: var(--space-6);
+      padding-right: var(--space-6);
+      transition: padding 0.3s ease;
+    }
+    
+    .nav.scrolled .nav-inner {
+      padding-top: var(--space-3);
+      padding-bottom: var(--space-3);
+    }
+    
+    .brand{
+      display:flex; 
+      align-items:center; 
+      gap:var(--space-3);
+      font-weight:800;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .brand:hover {
+      transform: scale(1.02);
+    }
+    
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      background:#ffffff;
+      border:1px solid var(--stroke);
+      box-shadow: var(--shadow-md);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    
+    .logo img{
+      width:85%;
+      height:85%;
+      object-fit:contain;
+    }
+    
+    .logo:hover{
+      transform: scale(1.08);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .logo::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(45deg, var(--brand), var(--gold));
+      border-radius: var(--radius-lg);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .logo:hover::after {
+      opacity: 0.15;
+    }
+
+    .profile-summary{
+      line-height: 1.75;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    
+    .profile-actions{
+      margin-top: 14px;
+    }
+    
+    .profile-actions .btn{
+      width: 100%;
+      justify-content: center;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: 0;
+    }
+    
+    .nav-links{
+      display:flex; 
+      gap:var(--space-2); 
+      align-items:center;
+    }
+    
+    .nav-links a{
+      padding:var(--space-2) var(--space-4); 
+      border-radius:var(--radius);
+      color:var(--text-muted);
+      font-weight:600;
+      font-size:15px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 24px;
+      height: 2px;
+      background: var(--brand);
+      border-radius: 2px;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-links a:hover{
+      color:var(--text);
+      background: rgba(22,163,74,.06);
+    }
+
+    .nav-links a:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* BUTTONS - more polished */
+    .btn{
+      display:inline-flex; 
+      align-items:center; 
+      justify-content:center; 
+      gap:var(--space-2);
+      padding:var(--space-3) var(--space-5);
+      border-radius:var(--radius-lg);
+      border:1px solid var(--stroke);
+      background: #fff;
+      color:var(--text);
+      box-shadow: var(--shadow);
+      transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space:nowrap;
+      font-weight:700;
+      font-size:15px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,.6), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .btn:hover::before {
+      opacity: 1;
+    }
+    
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn:active {
+      transform: translateY(0);
+    }
+    
+    .btn.primary{
+      border-color: transparent;
+      color:white;
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      box-shadow: 0 4px 14px rgba(22,163,74,.25);
+    }
+    
+    .btn.primary:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(22,163,74,.35);
+    }
+    
+    .btn.gold{
+      border-color: transparent;
+      color:#78350f;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      box-shadow: 0 4px 14px rgba(245,158,11,.25);
+    }
+    
+    .btn.gold:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245,158,11,.35);
+    }
+
+    .pill{
+      display:inline-flex; 
+      align-items:center; 
+      gap:var(--space-2);
+      padding:var(--space-2) var(--space-4);
+      border-radius:999px;
+      background: linear-gradient(135deg, rgba(34,197,94,.12), rgba(34,197,94,.08));
+      border:1px solid rgba(34,197,94,.2);
+      color:#15803d;
+      font-size:14px;
+      font-weight:700;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    /* TRUST BADGES */
+    .trust-bar {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--stroke);
+      border-bottom: 1px solid var(--stroke);
+      padding: var(--space-4) 0;
+      margin-top: var(--space-8);
+    }
+
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .trust-item i {
+      color: var(--brand);
+      font-size: 18px;
+    }
+
+    /* HERO SECTION - enhanced layout */
+    .hero{
+      padding:var(--space-12) 0 var(--space-8);
+    }
+    
+    .hero-grid{
+      display:grid; 
+      grid-template-columns: 1.1fr .9fr; 
+      gap:var(--space-8); 
+      align-items:center;
+    }
+    
+    .h1{
+      font-size:clamp(32px, 5vw, 52px);
+      line-height:1.1; 
+      margin:var(--space-5) 0 var(--space-4); 
+      letter-spacing:-1.2px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .sub{
+      color:var(--text-muted); 
+      font-size:17px; 
+      line-height:1.7; 
+      margin:0 0 var(--space-6);
+      max-width: 560px;
+    }
+    
+    .hero-actions{
+      display:flex; 
+      gap:var(--space-3); 
+      flex-wrap:wrap; 
+      margin-top:var(--space-5);
+    }
+    
+    .stats{
+      display:grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap:var(--space-3); 
+      margin-top:var(--space-6);
+    }
+    
+    .stat{
+      padding:var(--space-5); 
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.95);
+      border:1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(34,197,94,0.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .stat:hover::before {
+      left: 100%;
+    }
+    
+    .stat:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(34,197,94,.25);
+    }
+    
+    .stat b{
+      display:block; 
+      font-size:19px; 
+      color: var(--brand);
+      margin-bottom: var(--space-1);
+      font-weight: 800;
+    }
+    
+    .stat span{
+      color:var(--text-light); 
+      font-size:14px;
+      line-height: 1.5;
+    }
+
+    .hero-card{
+      border-radius: var(--radius-2xl);
+      background: #fff;
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow-xl);
+      overflow:hidden;
+      position:relative;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hero-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 32px 64px rgba(15, 23, 42, .15);
+    }
+    
+    .hero-card .cover{
+      height:240px;
+      background-image: url("assets/images/logo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: #fffbeb;
+      position: relative;
+    }
+    
+    .hero-card .cover::after{
+      content:"";
+      position:absolute; 
+      inset:0;
+      background:
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,.8), transparent 45%),
+        radial-gradient(circle at 75% 25%, rgba(255,255,255,.7), transparent 50%),
+        radial-gradient(circle at 50% 75%, rgba(255,255,255,.6), transparent 55%);
+      opacity:.85;
+    }
+
+    /* Online Status Indicator */
+    .online-badge {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      background: rgba(22,163,74,0.95);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(22,163,74,0.3);
+      z-index: 10;
+    }
+
+    .online-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    .agent{
+      padding:var(--space-6);
+      display:flex; 
+      gap:var(--space-4); 
+      align-items:flex-start;
+    }
+    
+    .avatar{
+      width:64px; 
+      height:64px;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      box-shadow: 0 8px 24px rgba(22,163,74,.2);
+      flex:0 0 auto;
+      background: #fff;
+      border: 2px solid rgba(34,197,94,.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .avatar::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      background: linear-gradient(45deg, var(--brand), var(--gold));
+      border-radius: var(--radius-xl);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+      animation: rotate-slow 3s linear infinite;
+    }
+    
+    .avatar:hover {
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 12px 32px rgba(22,163,74,.3);
+      border-color: rgba(34,197,94,.3);
+    }
+
+    .avatar:hover::after {
+      opacity: 0.3;
+    }
+    
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+
+    .agent h3{
+      margin:0 0 var(--space-2); 
+      font-size:19px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    
+    .agent p{
+      margin:0; 
+      color:var(--text-muted); 
+      font-size:14px; 
+      line-height:1.6;
+    }
+    
+    .agent .mini{
+      margin-top:var(--space-4); 
+      display:flex; 
+      gap:var(--space-2); 
+      flex-wrap:wrap;
+    }
+    
+    .mini .tag{
+      font-size:12px; 
+      color:#15803d;
+      padding:var(--space-2) var(--space-3); 
+      border-radius:999px;
+      border:1px solid rgba(34,197,94,.2);
+      background: rgba(34,197,94,.08);
+      font-weight:700;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .mini .tag:hover {
+      background: rgba(34,197,94,.15);
+      transform: scale(1.05);
+      border-color: rgba(34,197,94,.3);
+    }
+
+    .agent-actions {
+      margin-top: var(--space-4);
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    /* SECTIONS - better spacing */
+    section{
+      padding:var(--space-12) 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .sec-title{
+      display:flex; 
+      align-items:flex-end; 
+      justify-content:space-between; 
+      gap:var(--space-4); 
+      margin-bottom:var(--space-8);
+    }
+    
+    .sec-title > div{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    
+    .sec-title h2{
+      margin:0; 
+      font-size:clamp(26px, 4vw, 36px);
+      font-weight: 900;
+      position: relative;
+      display: inline-block;
+      letter-spacing: -0.5px;
+      padding-bottom: 14px;
+    }
+    
+    .sec-title h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 74px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand) 0%, var(--gold) 100%);
+      border-radius: 999px;
+    }
+    
+    .sec-title p{
+      margin:0; 
+      color:var(--text-muted); 
+      font-size:15px;
+      line-height: 1.6;
+    }
+
+    .grid3{
+      display:grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap:var(--space-6);
+    }
+    
+    .grid2{
+      display:grid; 
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+      gap:var(--space-6);
+    }
+
+    /* CARDS - more refined */
+    .card{
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.96);
+      border:1px solid var(--stroke);
+      padding:var(--space-6);
+      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.5), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .card:hover::before {
+      left: 100%;
+    }
+    
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(34,197,94,.2);
+    }
+    
+    .card h3{
+      margin:0 0 var(--space-3); 
+      font-size:18px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+    
+    .card p{
+      margin:0; 
+      color:var(--text-muted); 
+      font-size:15px; 
+      line-height:1.7;
+    }
+
+    /* PACKAGES - enhanced design */
+    .package{
+      display:flex; 
+      flex-direction:column; 
+      gap:var(--space-4);
+      position:relative;
+      overflow:hidden;
+    }
+    
+    .package::before{
+      content:"";
+      position:absolute; 
+      inset:-2px;
+      background:
+        radial-gradient(600px 200px at 10% 0%, rgba(34,197,94,.12), transparent 60%),
+        radial-gradient(600px 200px at 90% 0%, rgba(245,158,11,.12), transparent 60%);
+      pointer-events:none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+    
+    .package:hover::before {
+      opacity: 1;
+    }
+    
+    .package > *{position:relative}
+    
+    .pkg-top{
+      display:flex; 
+      align-items:flex-start; 
+      justify-content:space-between; 
+      gap:var(--space-4);
+    }
+    
+    .price{
+      font-weight:900; 
+      font-size:20px;
+      color: var(--brand);
+      letter-spacing:-0.3px;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .price::after {
+      content: '🔥';
+      position: absolute;
+      top: -8px;
+      right: -24px;
+      font-size: 16px;
+      animation: bounce-gentle 2s ease-in-out infinite;
+    }
+    
+    .pkg-meta{
+      display:flex; 
+      gap:var(--space-2); 
+      flex-wrap:wrap;
+      margin-top: var(--space-2);
+    }
+    
+    .chip{
+      font-size:12px; 
+      color:var(--text-muted);
+      padding:6px var(--space-3); 
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(14,165,233,.06);
+      font-weight:650;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .chip:hover {
+      background: rgba(14,165,233,.12);
+      transform: scale(1.05);
+      border-color: rgba(14,165,233,.2);
+    }
+    
+    .pkg-list{
+      margin:var(--space-2) 0; 
+      padding-left:var(--space-5); 
+      color:var(--text-muted); 
+      line-height:1.75; 
+      font-size:15px;
+    }
+    
+    .pkg-list li {
+      margin: var(--space-2) 0;
+      transition: all 0.2s ease;
+    }
+    
+    .pkg-list li:hover {
+      color: var(--text);
+      transform: translateX(4px);
+    }
+    
+    .pkg-actions{
+      display:flex; 
+      gap:var(--space-3); 
+      flex-wrap:wrap; 
+      margin-top:var(--space-2);
+    }
+
+    /* TESTIMONIALS */
+    .quote{
+      position:relative; 
+      padding-left:var(--space-5);
+      font-style: italic;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    
+    .quote:before{
+      content:""";
+      position:absolute; 
+      left:0; 
+      top:-12px;
+      font-size:42px; 
+      color: rgba(22,163,74,.3);
+      font-weight:900;
+      line-height: 1;
+    }
+    
+    .who{
+      margin-top:var(--space-4); 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      gap:var(--space-3);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--stroke);
+    }
+    
+    .who b{
+      font-size:15px; 
+      color: var(--brand);
+      font-weight: 800;
+    }
+    
+    .who span{
+      color:var(--text-light); 
+      font-size:12px;
+      padding: 5px var(--space-3);
+      background: rgba(34,197,94,.08);
+      border-radius: var(--radius);
+      font-weight: 600;
+    }
+
+    /* Star Rating */
+    .rating {
+      display: flex;
+      gap: 2px;
+      margin-top: var(--space-2);
+    }
+
+    .rating i {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    /* FAQ - better interaction */
+    details{
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.96);
+      border-radius: var(--radius-xl);
+      padding: var(--space-4) var(--space-5);
+      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      margin-bottom: var(--space-3);
+    }
+    
+    details:hover {
+      border-color: rgba(34,197,94,.3);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    
+    details[open] {
+      background: rgba(34,197,94,.04);
+      border-color: rgba(34,197,94,.3);
+      box-shadow: var(--shadow-md);
+    }
+    
+    details summary{
+      cursor:pointer;
+      font-weight:800;
+      font-size: 16px;
+      list-style:none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: color 0.2s ease;
+      line-height: 1.5;
+    }
+    
+    details summary:hover {
+      color: var(--brand);
+    }
+    
+    details summary::-webkit-details-marker{display:none}
+    
+    details summary::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--brand);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      background: rgba(34,197,94,.08);
+    }
+    
+    details[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+      background: rgba(34,197,94,.15);
+    }
+    
+    details p{
+      margin:var(--space-4) 0 0; 
+      color:var(--text-muted); 
+      line-height:1.7; 
+      font-size:15px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* CONTACT FORM */
+    .contact{
+      display:grid; 
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap:var(--space-5);
+      align-items:start;
+    }
+
+    .contact .card{
+      padding: 20px;
+    }
+    
+    .contact .card h3{
+      margin-bottom: 6px;
+    }
+    
+    .contact .field{
+      margin-top: 14px;
+    }
+    
+    .form-actions{
+      margin-top: var(--space-4);
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    
+    .form-actions .btn{
+      min-width: 160px;
+    }
+    textarea.input{
+      min-height: 96px;
+      resize: vertical;
+    }
+    
+    .field{
+      display:flex; 
+      flex-direction:column; 
+      gap:var(--space-2); 
+      margin-top:var(--space-4);
+    }
+
+    .field label {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+    .input{
+      padding:var(--space-3) var(--space-4); 
+      border-radius:var(--radius-lg);
+      border:1.5px solid var(--stroke);
+      background: #fff;
+      color:var(--text);
+      outline:none;
+      font-size: 15px;
+      box-shadow: inset 0 1px 2px rgba(15, 23, 42, .05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: inherit;
+    }
+    
+    .input:hover {
+      border-color: rgba(34,197,94,.3);
+    }
+    
+    .input:focus{
+      border-color: rgba(34,197,94,.5);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.1);
+      transform: translateY(-1px);
+    }
+    
+    textarea.input{
+      min-height:120px; 
+      resize:vertical;
+    }
+    
+    .fine{
+      color:var(--text-light); 
+      font-size:13px; 
+      line-height:1.6; 
+      margin-top:var(--space-4);
+      padding: var(--space-3);
+      background: rgba(14,165,233,.04);
+      border-radius: var(--radius);
+      border: 1px solid rgba(14,165,233,.1);
+    }
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+    
+    .info-card {
+      padding: var(--space-4);
+      background: rgba(14,165,233,.04);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(14,165,233,.1);
+      transition: all 0.2s ease;
+    }
+
+    .info-card:hover {
+      background: rgba(14,165,233,.08);
+      border-color: rgba(14,165,233,.2);
+      transform: translateY(-2px);
+    }
+
+    .info-card h3 {
+      margin: 0 0 var(--space-2);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:var(--space-8) 0 var(--space-10); 
+      color:var(--text-muted); 
+      font-size:14px;
+    }
+    
+    .foot{
+      border-top:1px solid var(--stroke);
+      padding-top:var(--space-6);
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      gap:var(--space-4); 
+      flex-wrap:wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    /* FLOATING ELEMENTS */
+    .wa-float {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      z-index: 1000;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .wa-float .btn {
+      box-shadow: 0 8px 32px rgba(22,163,74,.35);
+      padding: var(--space-4) var(--space-6);
+      position: relative;
+    }
+
+    .wa-float .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      background: var(--brand);
+      opacity: 0.3;
+      animation: glow 2s ease-in-out infinite;
+      z-index: -1;
+    }
+    
+    .wa-float .btn:hover {
+      box-shadow: 0 12px 40px rgba(22,163,74,.45);
+    }
+
+    /* Notification Dot */
+    .notification-dot {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 12px;
+      height: 12px;
+      background: #ef4444;
+      border: 2px solid white;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: var(--space-6);
+      right: 120px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-top .btn {
+      width: 52px;
+      height: 52px;
+      padding: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .map-card{
+      margin-top: 14px;
+      padding: 14px;
+      background: rgba(34,197,94,.05);
+      border: 1px solid rgba(34,197,94,.14);
+      border-radius: var(--radius-lg);
+      transition: all 0.2s ease;
+    }
+
+    .social-links{
+      margin-top: 10px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    
+    .social-links .btn{
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      min-width: unset;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .map-card:hover{
+      background: rgba(34,197,94,.08);
+      border-color: rgba(34,197,94,.24);
+      transform: translateY(-2px);
+    }
+    
+    .map-card h3{
+      margin: 0 0 var(--space-2);
+      font-size: 15px;
+      font-weight: 800;
+    }
+    
+    .map-card p{
+      margin: 0 0 var(--space-3);
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    
+    .map-actions{
+      display:flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .map-embed{
+      width: 100%;
+      height: 170px;
+      border: 0;
+      border-radius: 14px;
+      margin-top: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .map-note{
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 120px;
+      right: var(--space-6);
+      background: var(--brand);
+      color: white;
+      padding: var(--space-4) var(--space-6);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      z-index: 2000;
+      animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    
+    .toast.show {
+      display: block;
+    }
+
+    /* TOUR CARDS */
+    .tour-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--space-6);
+    }
+    
+    .tour-card{
+      background:#fff;
+      border:1px solid var(--stroke);
+      border-radius: var(--radius-xl);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .tour-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .tour-card:hover{
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .tour-image-wrap{
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tour-image{
+      width:100%;
+      height:280px;
+      object-fit: cover;
+      display:block;
+      transition: transform 0.5s ease;
+    }
+
+    .tour-card:hover .tour-image {
+      transform: scale(1.05);
+    }
+    
+    .tour-overlay{
+      position:absolute;
+      top:10px;
+      right:12px;
+      background: rgba(0,0,0,0.45);
+      color:#fff;
+      padding:5px 10px;
+      border-radius:20px;
+      font-size:12px;
+      font-weight:500;
+      display:flex;
+      align-items:center;
+      gap:6px;
+      backdrop-filter: blur(4px);
+    }
+    
+    .tour-overlay i{
+      font-size:12px;
+    }
+    
+    .tour-overlay .dot{
+      margin:0 4px;
+      opacity:.7;
+    }
+    
+    .tour-badge{
+      position:absolute;
+      top:18px;
+      left:-36px;
+      background:#ef4444;
+      color:#fff;
+      font-size:13px;
+      font-weight:800;
+      padding:8px 42px;
+      transform: rotate(-45deg);
+      box-shadow: 0 8px 20px rgba(239,68,68,.28);
+      z-index:2;
+    }
+    
+    .tour-body{
+      padding: var(--space-5);
+      text-align:center;
+    }
+    
+    .tour-title{
+      font-size:17px;
+      font-weight:700;
+      color:#0f3f8c;
+      line-height:1.4;
+      margin-bottom:10px;
+    }
+    
+    .tour-meta{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      color:#d97706;
+      font-size:14px;
+      margin-bottom:14px;
+    }
+    
+    .tour-meta span{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-weight:500;
+    }
+    
+    .tour-price{
+      font-size:15px;
+      font-weight:600;
+      color:#000000;
+      margin-bottom:18px;
+      letter-spacing: 0;
+    }
+    
+    .tour-price small{
+      font-size:13px;
+      color:var(--text-light);
+      font-weight:400;
+    }
+    
+    .tour-actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    
+    .tour-note{
+      margin-top: var(--space-4);
+      font-size:13px;
+      color:var(--text-light);
+    }
+
+    /* PROGRESS BAR */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand), var(--gold));
+      z-index: 9999;
+      transition: width 0.2s ease;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px){
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap: var(--space-8);
+      }
+      
+      .contact{
+        grid-template-columns:1fr;
+      }
+      
+      .stats{
+        grid-template-columns:1fr;
+      }
+
+      .grid2 {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-items {
+        gap: var(--space-4);
+      }
+    }
+
+    @media (max-width: 768px){
+      .wrap {
+        padding: 0 var(--space-4);
+      }
+
+      .form-actions .btn,
+      .social-links .btn{
+        width: 100%;
+      }
+      
+      .map-embed{
+        height: 160px;
+      }
+
+      .nav-inner {
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+      }
+
+      .nav-links{
+        display:none;
+      }
+      
+      .h1{
+        font-size:32px;
+        letter-spacing: -0.8px;
+      }
+
+      .hero {
+        padding: var(--space-8) 0 var(--space-6);
+      }
+
+      section {
+        padding: var(--space-8) 0;
+      }
+
+      .sec-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+
+      .grid3{
+        grid-template-columns:1fr;
+      }
+      
+      .wa-float {
+        bottom: var(--space-4);
+        right: var(--space-4);
+      }
+      
+      .scroll-top {
+        bottom: 100px;
+        right: var(--space-4);
+      }
+
+      .contact-info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-items {
+        gap: var(--space-3);
+      }
+
+      .trust-item {
+        font-size: 13px;
+      }
+    }
+
+    /* PAGE LOAD */
+    body {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    /* Skeleton Loading */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="brand">
+        <div class="logo">
+          <img src="assets/images/kecil.jpeg" alt="Samira Travel Logo">
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">Samira Travel</div>
+          <div class="brand-subtitle">Landing Page Mitra</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#paket">Paket</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+
+      <a class="btn primary" id="ctaTop" href="#" target="_blank" rel="noopener">
+        <span>Chat WhatsApp</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="pill animate-in">
+            <span aria-hidden="true">🕋</span>
+            <span>Konsultasi & pendaftaran Umrah/Haji via mitra Erni Suciningsih</span>
+          </div>
+
+          <h1 class="h1 animate-in animate-delay-1">Perjalanan ibadah lebih nyaman, lebih siap, dan lebih tenang.</h1>
+          <p class="sub animate-in animate-delay-2">
+            Halaman ini dibuat untuk promosi <b>mitra Erni Suciningsih sebagai mitra Samira Travel</b>.
+            Calon jamaah bisa lihat paket, tanya jadwal, dan langsung daftar lewat WhatsApp.
+          </p>
+
+          <div class="hero-actions animate-in animate-delay-3">
+            <a class="btn primary" href="#paket">Lihat Paket Umrah</a>
+            <a class="btn gold" href="#kontak">Minta Brosur Gratis</a>
+          </div>
+
+          <div class="stats animate-in animate-delay-4">
+            <div class="stat">
+              <b>Respons Cepat</b>
+              <span>Langsung dibantu via WhatsApp</span>
+            </div>
+            <div class="stat">
+              <b>Info Jelas</b>
+              <span>Harga, jadwal & fasilitas transparan</span>
+            </div>
+            <div class="stat">
+              <b>Pendampingan</b>
+              <span>Dokumen, manasik, sampai berangkat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card animate-in animate-delay-2">
+          <div class="online-badge">
+            <span>Online Sekarang</span>
+          </div>
+          <div class="cover"></div>
+          <div class="agent">
+            <div class="avatar" title="Agen">
+              <img src="assets/images/ibu.png" alt="Foto Agen" />
+            </div>
+            <div style="flex: 1;">
+              <h3><span id="agentName">[Erni Suciningsih]</span> — Mitra Samira</h3>
+              <p>
+                Wilayah layanan: <b id="agentCity">[Kota/Kabupaten]</b>.<br/>
+                Konsultasi gratis untuk rekomendasi paket yang cocok.
+              </p>
+
+              <div class="mini">
+                <span class="tag">✅ Konsultasi</span>
+                <span class="tag">✅ Pendampingan Dokumen</span>
+                <span class="tag">✅ Info Jadwal</span>
+              </div>
+
+              <div class="agent-actions">
+                <a class="btn primary" id="ctaCard" href="#" target="_blank" rel="noopener">Chat Sekarang</a>
+                <a class="btn" href="#paket">Lihat Paket</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="trust-bar animate-in animate-delay-5">
+        <div class="trust-items">
+          <div class="trust-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Terdaftar Resmi</span>
+          </div>
+          <!-- <div class="trust-item">
+            <i class="fas fa-users"></i>
+            <span>Ratusan Jamaah Puas</span>
+          </div> -->
+          <div class="trust-item">
+            <i class="fas fa-headset"></i>
+            <span>Support 24/7</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-award"></i>
+            <span>Berpengalaman</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="paket">
+      <div class="sec-title">
+        <div>
+          <h2>Pilihan Paket Umrah</h2>
+          <p>Contoh tampilan paket dibuat menyesuaikan gaya website original agar lebih familiar dan menarik.</p>
+        </div>
+        <a class="btn gold" href="#kontak">Minta Brosur</a>
+      </div>
+    
+      <div class="tour-grid">
+    
+        <div class="tour-card">
+          <div class="tour-image-wrap">
+            <img src="assets/images/paket1.png" alt="Umroh Ramadhan Surabaya 12H" class="tour-image">
+            <div class="tour-overlay">
+              <i class="fa-solid fa-plane"></i> Penerbangan
+              <span class="dot">•</span>
+              <i class="fa-solid fa-hotel"></i> Hotel
+            </div>
+          </div>
+    
+          <div class="tour-body">
+            <div class="tour-title">Umroh Ramadhan Surabaya 12H</div>
+    
+            <div class="tour-meta">
+              <span>📍 Saudi Arabia</span>
+              <span>🕒 12 Hari</span>
+            </div>
+    
+            <div class="tour-price">Rp 33.976.000 <small>/ pax</small></div>
+    
+            <div class="tour-actions">
+              <a class="btn primary pkg-wa-btn" data-package="Umroh Ramadhan Surabaya 12H" href="#" target="_blank" rel="noopener">Daftar via WA</a>
+              <a class="btn" href="#kontak">Tanya Paket</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="tour-card">
+          <div class="tour-badge">BEST SELLER</div>
+    
+          <div class="tour-image-wrap">
+            <img src="assets/images/paket2.png" alt="Umroh Ramadhan Jakarta 9H" class="tour-image">
+            <div class="tour-overlay">
+              <i class="fa-solid fa-plane"></i> Penerbangan
+              <span class="dot">•</span>
+              <i class="fa-solid fa-hotel"></i> Hotel
+            </div>
+          </div>
+    
+          <div class="tour-body">
+            <div class="tour-title">Umroh Ramadhan Jakarta 9H</div>
+    
+            <div class="tour-meta">
+              <span>📍 Saudi Arabia</span>
+              <span>🕒 9 Hari</span>
+            </div>
+    
+            <div class="tour-price">Rp 31.976.000 <small>/ pax</small></div>
+    
+            <div class="tour-actions">
+              <a class="btn primary pkg-wa-btn" data-package="Umroh Ramadhan Jakarta 9H" href="#" target="_blank" rel="noopener">Tanya Paket</a>
+              <a class="btn" href="#keunggulan">Lihat Benefit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-image-wrap">
+            <img src="assets/images/paket3.png" alt="Umroh Ramadhan Jakarta 12H" class="tour-image">
+              <div class="tour-overlay">
+                <i class="fa-solid fa-plane"></i> Penerbangan
+                <span class="dot">•</span>
+                <i class="fa-solid fa-hotel"></i> Hotel
+              </div>
+            </div>
+    
+          <div class="tour-body">
+            <div class="tour-title">Umroh Ramadhan Jakarta 12H</div>
+    
+            <div class="tour-meta">
+              <span>📍 Saudi Arabia</span>
+              <span>🕒 12 Hari</span>
+            </div>
+    
+            <div class="tour-price">Rp 35.976.000 <small>/ pax</small></div>
+    
+            <div class="tour-actions">
+              <a class="btn primary pkg-wa-btn" data-package="Umroh Ramadhan Jakarta 12H" href="#" target="_blank" rel="noopener">Minta Brosur</a>
+              <a class="btn" href="#kontak">Konsultasi</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="keunggulan">
+      <div class="sec-title">
+        <div>
+          <h2>Kenapa lewat mitra Erni Suciningsih?</h2>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>1) Konsultasi ramah</h3>
+          <p>Calon jamaah bisa tanya dari awal: paspor, perlengkapan, hingga estimasi biaya total.</p>
+        </div>
+        <div class="card">
+          <h3>2) Dibantu step-by-step</h3>
+          <p>Pilih paket → dokumen → manasik → berangkat. Semua diarahkan jelas.</p>
+        </div>
+        <div class="card">
+          <h3>3) Update jadwal & seat</h3>
+          <p>Kalau seat terbatas, calon jamaah bisa cepat booking sesuai ketentuan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni">
+      <div class="sec-title">
+        <div>
+          <h2>Testimoni Singkat</h2>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="quote">Alhamdulillah dibantu dari dokumen sampai manasik. Komunikasinya jelas dan cepat.</div>
+          <div class="who">
+            <b>Pak R</b>
+            <span>Umrah</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="quote">Pertama kali umrah, jadi tenang karena diarahkan step-by-step.</div>
+          <div class="who">
+            <b>Bu S</b>
+            <span>Umrah</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="quote">Info paketnya transparan. Enak tanya apa pun, dijawab lengkap.</div>
+          <div class="who">
+            <b>Mas A</b>
+            <span>Umrah</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="sec-title">
+        <div>
+          <h2>Pertanyaan Umum (FAQ)</h2>
+        </div>
+      </div>
+
+      <div>
+        <details open>
+          <summary>Dokumen apa yang biasanya dibutuhkan?</summary>
+          <p>Umumnya paspor, KTP, KK, foto, dan dokumen pendukung lain sesuai ketentuan paket. Untuk detailnya, chat WhatsApp ya.</p>
+        </details>
+        
+        <details>
+          <summary>Kalau belum punya paspor, bisa dibantu?</summary>
+          <p>Bisa diarahkan prosesnya (syarat, langkah, dan estimasi waktu) sesuai domisili.</p>
+        </details>
+        
+        <details>
+          <summary>Boleh minta brosur dan jadwal terbaru?</summary>
+          <p>Boleh. Klik tombol WhatsApp, nanti dikirim brosur + rekomendasi paket.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <div class="sec-title">
+        <div>
+          <h2>Kontak & Konsultasi</h2>
+          <!-- <p>Isi pesan singkat, otomatis ke WhatsApp ibu kamu.</p> -->
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="card">
+          <h3>Chat WhatsApp</h3>
+          <p style="margin-top:calc(var(--space-2) * -1); margin-bottom: var(--space-2);">Biar cepat, tulis kebutuhanmu (paket, kota keberangkatan, jadwal).</p>
+
+          <div class="field">
+            <label>Nama</label>
+            <input class="input" id="nama" placeholder="contoh: Ferdi" />
+          </div>
+
+          <div class="field">
+            <label>Minat paket</label>
+            <input class="input" id="minat" placeholder="contoh: Paket 9 Hari / 12 Hari / Premium" />
+          </div>
+
+          <div class="field">
+            <label>Pesan</label>
+            <textarea class="input" id="pesan" placeholder="contoh: minta brosur & jadwal terdekat dari Jakarta"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn primary" id="btnWa" type="button">
+              <span>Kirim ke WhatsApp</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a class="btn gold" href="#paket">Lihat Paket</a>
+          </div>
+
+          <!-- <div class="fine">
+            💡 Tambahkan brosur PDF dan foto kegiatan agar lebih dipercaya.
+          </div> -->
+        </div>
+
+        <div class="card">
+          <h3>Profil Mitra</h3>
+          <p class="profile-summary">
+            <b>Nama:</b> <span id="agentName2">[Erni Suciningsih]</span><br/>
+            <b>Wilayah:</b> <span id="agentCity2">[Kota/Kabupaten]</span><br/>
+            <b>Jam:</b> 08.00–21.00 WIB
+          </p>
+
+          <div class="contact-info-grid">
+            <div class="info-card">
+              <h3>📄 Brosur</h3>
+              <p>Taruh link PDF/GDrive brosur terbaru.</p>
+            </div>
+            <div class="info-card">
+              <h3>📱 Sosial Media</h3>
+              <p>Lihat akun sosial media mitra untuk menambah kepercayaan calon jamaah.</p>
+            
+              <div class="social-links">
+                <a class="btn" id="igLink" href="#" target="_blank" rel="noopener">Instagram</a>
+                <a class="btn" id="fbLink" href="#" target="_blank" rel="noopener">Facebook</a>
+                <a class="btn" id="ttLink" href="#" target="_blank" rel="noopener">TikTok</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="map-card">
+            <h3>📍 Lokasi Mitra</h3>
+            <p id="agentAddress">Kabupaten Brebes, Jawa Tengah</p>
+          
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps?q=-6.9073961,108.833168&z=18&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          
+            <div class="map-actions" style="margin-top: 14px;">
+              <a class="btn" id="ctaMaps" href="#" target="_blank" rel="noopener">
+                Buka Google Maps
+              </a>
+            </div>
+          
+            <div class="map-note">
+              Lokasi mitra bisa dilihat langsung di peta atau dibuka lewat Google Maps.
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a class="btn primary" id="ctaBrosur" href="#" target="_blank" rel="noopener">
+              Minta Brosur via WhatsApp
+            </a>
+          </div>
+
+          <div class="fine">
+            ℹ️ Disclaimer: halaman ini untuk promosi mitra (konsultasi & pendaftaran via WhatsApp).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> Landing Page Mitra Samira Travel • Dibuat oleh Ferdi</div>
+        <div class="footer-links">
+          <a class="btn" href="#kontak">Kontak</a>
+          <a class="btn" href="#paket">Paket</a>
+          <a class="btn" href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="wa-float">
+    <a class="btn primary" id="waFloat" href="#" target="_blank" rel="noopener">
+      <div class="notification-dot"></div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <span>Chat</span>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-top" id="scrollTop">
+    <button class="btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ====== UBAH DI SINI ======
+    const AGENT_NAME = "Erni Suciningsih";
+    const AGENT_CITY = "Kabupaten Brebes";
+    const WA_NUMBER  = "6288802024849"; // format: 628xxxxxxxxxx
+    const AGENT_MAPS_LINK = "https://maps.app.goo.gl/UDzxntBLWtXvZQeTA";
+    const AGENT_ADDRESS = "Kabupaten Brebes, Jawa Tengah";
+    const AGENT_IG_LINK = "https://instagram.com/username_ig";
+    const AGENT_FB_LINK = "https://facebook.com/username_fb";
+    const AGENT_TT_LINK = "https://tiktok.com/@username_tiktok";
+    // ===========================
+
+    // Update agent info
+    document.getElementById("agentName").textContent = AGENT_NAME;
+    document.getElementById("agentName2").textContent = AGENT_NAME;
+    document.getElementById("agentCity").textContent = AGENT_CITY;
+    document.getElementById("agentCity2").textContent = AGENT_CITY;
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const agentAddressEl = document.getElementById("agentAddress");
+    if (agentAddressEl) agentAddressEl.textContent = AGENT_ADDRESS;
+
+    // Loading screen
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loadingScreen').classList.add('hidden');
+        document.body.classList.add('loaded');
+        initAnimations();
+      }, 800);
+    });
+
+    // Progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const scrollTop = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+        scrollTop.classList.add('visible');
+      } else {
+        navbar.classList.remove('scrolled');
+        scrollTop.classList.remove('visible');
+      }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        if (id === '#') return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+
+    // Toast notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // WhatsApp message from form
+    document.getElementById("btnWa").addEventListener("click", () => {
+      const nama  = (document.getElementById("nama").value || "").trim();
+      const minat = (document.getElementById("minat").value || "").trim();
+      const pesan = (document.getElementById("pesan").value || "").trim();
+
+      if (!nama) {
+        showToast('❌ Mohon isi nama Anda');
+        return;
+      }
+
+      const text =
+        `Assalamualaikum, Bu ${AGENT_NAME}. Saya ${nama}.\n` +
+        `Minat paket: ${minat || "-"}.\n` +
+        `Pesan: ${pesan || "-"}\n\n` +
+        `Mohon info brosur, jadwal terdekat, dan rincian biaya ya.`;
+
+      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank", "noopener");
+      showToast('✅ Mengarahkan ke WhatsApp...');
+    });
+
+    // Update all WhatsApp CTAs
+    function updateWALinks() {
+      const ctaTop = document.getElementById("ctaTop");
+      const ctaCard = document.getElementById("ctaCard");
+      const waFloat = document.getElementById("waFloat");
+      const ctaBrosur = document.getElementById("ctaBrosur");
+      const ctaMaps = document.getElementById("ctaMaps");
+
+      const igLink = document.getElementById("igLink");
+      const fbLink = document.getElementById("fbLink");
+      const ttLink = document.getElementById("ttLink");
+
+      const defaultMsg = `Assalamualaikum, Bu ${AGENT_NAME}. Saya mau konsultasi paket Umrah/Haji Samira. Boleh info detailnya?`;
+      const brosurMsg = `Assalamualaikum, Bu ${AGENT_NAME}. Saya mau minta brosur Umrah Samira dan jadwal terdekat ya.`;
+
+      if (ctaTop) ctaTop.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(defaultMsg)}`;
+      if (ctaCard) ctaCard.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(defaultMsg)}`;
+      if (waFloat) waFloat.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(defaultMsg)}`;
+      if (ctaBrosur) ctaBrosur.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(brosurMsg)}`;
+      if (igLink) igLink.href = AGENT_IG_LINK;
+      if (fbLink) fbLink.href = AGENT_FB_LINK;
+      if (ttLink) ttLink.href = AGENT_TT_LINK;
+      if (ctaMaps) ctaMaps.href = AGENT_MAPS_LINK;
+
+      // Package CTAs
+      document.querySelectorAll('.pkg-wa-btn').forEach(btn => {
+        const packageName = btn.getAttribute('data-package');
+        const msg = `Assalamualaikum, Bu ${AGENT_NAME}. Saya minat ${packageName}. Boleh info detail jadwal dan fasilitas?`;
+        btn.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+      });
+    }
+
+    updateWALinks();
+
+    // Intersection Observer for scroll animations
+    function initAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+
+      // Observe cards
+      document.querySelectorAll('.card, .tour-card').forEach(card => {
+        observer.observe(card);
+      });
+    }
+
+    // Form validation with visual feedback
+    const inputs = document.querySelectorAll('.input');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.value.trim() && input.id === 'nama') {
+          input.style.borderColor = 'var(--brand)';
+        }
+      });
+
+      input.addEventListener('focus', () => {
+        input.style.borderColor = 'rgba(34,197,94,.5)';
+      });
+
+      input.addEventListener('input', () => {
+        if (input.value.trim()) {
+          input.style.borderColor = 'rgba(34,197,94,.3)';
+        }
+      });
+    });
+
+    // Keyboard navigation for details
+    document.querySelectorAll('details').forEach(detail => {
+      detail.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          detail.open = !detail.open;
+        }
+      });
+    });
+
+    // Enhanced CTA tracking
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (this.href && this.href.includes('wa.me')) {
+          showToast('📱 Membuka WhatsApp...');
+        }
+      });
+    });
+
+    // Console welcome message
+    console.log('%c🕋 Samira Travel Landing Page', 'font-size: 20px; font-weight: bold; color: #16a34a;');
+    console.log('%cDibuat oleh Ferdi', 'font-size: 14px; color: #64748b;');
+    console.log('%cEnhanced Version 2.0 ✨', 'font-size: 12px; color: #f59e0b;');
+  </script>
+</body>
+</html>
